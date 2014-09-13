@@ -9,8 +9,14 @@ public class CalculatorApp {
 
         double var1;
         double var2;
-
+        int choice;
         Scanner calculator = new Scanner(System.in);
+
+        System.out.println("Welcome to your calculator! ");
+        System.out.println("Which operation would you like to perform? Please enter the appropriate number:");
+        System.out.println("1 - addition\n2 - subtraction\n3 - addition\n4 - division\n5 - square root");
+        //calculator takes in number
+        //ready to go into error loop if an int isn't entered
 
         //The following lines can be used for addition through division calculators.
         System.out.println("Please enter first addend, followed by ENTER: ");
