@@ -19,12 +19,19 @@ public class CalculatorApp {
         //ready to go into error loop if an int isn't entered
 
         //The following lines can be used for addition through division calculators.
-        System.out.println("Please enter first addend, followed by ENTER: ");
+        //It would be neat to customize this to each operation: "addend", "subtrahend/minuend", etc.
+        System.out.println("Please enter first number, followed by ENTER: ");
+        if(calculator.hasNextInt()) {
+            var1 = calculator.nextInt();
+            calculator.nextLine();
+        }
         //calculator takes in first value, assigns to var1
         //ready to print error message, go into error loop if a double isn't entered
-        System.out.println("Please enter second addend, followed by ENTER: ");
+        System.out.println("Please enter second number, followed by ENTER: ");
         //calculator takes in second value, assigns to var2
         //ready to print error message if double isn't entered
+
+
 
         //ADDITION
         System.out.println("The sum of "+var1+" and "+var2+" is "+(var1+var2)+".");
@@ -33,7 +40,11 @@ public class CalculatorApp {
         //MULTIPLICATION
         System.out.println("The sum of "+var1+" and "+var2+" is "+(var1*var2)+".");
         //DIVISION
-        System.out.println("The sum of "+var1+" and "+var2+" is "+(var1/var2)+".");
+        if(var2!=0) {
+            System.out.println("The sum of "+var1+" and "+var2+" is "+(var1/var2)+".");
+        } else {
+            System.out.println("The quotient of "+var1+" and 0 is undefined.");
+        }
         //SQUARE ROOT
         System.out.println("The square root of "+var1+" is "+(Math.sqrt(var1))+".");
 
