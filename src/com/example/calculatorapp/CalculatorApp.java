@@ -32,13 +32,26 @@ public class CalculatorApp {
     }
 
     public static void main(String[] args) {
-
+        int choice = 1;
         double var1;
         double var2;
         System.out.println("Welcome to your calculator! ");
         System.out.println("Which operation would you like to perform? Please enter the appropriate number:");
 
         CalculatorApp.checkMainScreenInput();
+
+        switch(choice) {
+            case 1: //addition OR two variables
+                break;
+            case 2: //subtraction OR two variables
+                break;
+            case 3: //multiplication OR two variables
+                break;
+            case 4: //division OR two variables
+                break;
+            case 5: //square root OR one variable
+                break;
+        }
 //        //This method is used for when wrong information is entered into the calculators.
 //        //questionList is the list of questions that's displayed to the user before they input info (calcInput).
 //        //calcInput is the number that the user puts in to the calculator.
