@@ -12,6 +12,8 @@ public class CalculatorApp {
         String wrongMainScreen = ("Sorry, you need to enter a number between 1 and 5.");
         Scanner calculator = new Scanner(System.in);
         int choice = 1;
+        double var1, var2;
+        String wordChoice1, wordChoice2;
 
         do {
             System.out.println(mainScreenQuestions);
@@ -28,30 +30,78 @@ public class CalculatorApp {
                 calculator.nextLine();
             }
         } while (inMistakeLoop);
+        System.out.println(choice);
         return choice;
     }
 
+
     public static void main(String[] args) {
-        int choice = 1;
         double var1;
         double var2;
+//        int choice = 1;
         System.out.println("Welcome to your calculator! ");
         System.out.println("Which operation would you like to perform? Please enter the appropriate number:");
 
         CalculatorApp.checkMainScreenInput();
 
-        switch(choice) {
-            case 1: //addition OR two variables
-                break;
-            case 2: //subtraction OR two variables
-                break;
-            case 3: //multiplication OR two variables
-                break;
-            case 4: //division OR two variables
-                break;
-            case 5: //square root OR one variable
-                break;
+//        System.out.println(choice);
         }
+//        CalculatorApp.asmdInput();
+
+//        switch(choice) {
+//            case 1: {
+//                String wordChoice = "addend";
+////                CalculatorApp.asmdInput();
+//            }
+//            //addition OR two variables
+//            break;
+//            case 2: //subtraction OR two variables
+//                break;
+//            case 3: //multiplication OR two variables
+//                break;
+//            case 4: //division OR two variables
+//                break;
+//            case 5: //square root OR one variable
+//                break;
+
+
+
+
+
+//        switch(choice) {
+//            case 1: {
+//                wordChoice1 = "addend";
+//                wordChoice2 = "addend";
+//            }
+//            case 2: {
+//                wordChoice1 = "subtrahend";
+//                wordChoice2 = "minuend";
+//            }
+//            case 3: {
+//                wordChoice1 = "multiplicand";
+//                wordChoice2 = "multiplier";
+//            }
+//            case 4: {
+//                wordChoice1 = "dividend";
+//                wordChoice2 = "divisor";
+//            }
+//            case 5: {
+//                wordChoice1 = "radicand";
+//            }
+//        }
+//
+//        System.out.println("Please enter "+wordChoice1+":");
+//        System.out.println("Please enter "+wordChoice2+":");
+
+
+
+//    public static int asmdInput() {
+//        boolean inMistakeLoop = true;
+//        String wordChoice1, wordChoice2;
+//
+//    }
+
+
 //        //This method is used for when wrong information is entered into the calculators.
 //        //questionList is the list of questions that's displayed to the user before they input info (calcInput).
 //        //calcInput is the number that the user puts in to the calculator.
@@ -110,5 +160,4 @@ public class CalculatorApp {
 //        //ready to break the whole calculations loop if N is entered.
 
 
-    }
 }
