@@ -34,36 +34,52 @@ public class CalculatorApp {
         } while (inMistakeLoop);
         System.out.println(choice);
 
-        //This section is for addition.
+        //The following section is for each of the operations.
         //It should really use the choice from the previous do-while loop as an input.
         //I want it to be in a switch, if that's possible...
         //...but there are so many steps needed after a switch, it would be hard to read unless
         //I made a separate method for each operation.
 
-        do {
-            inMistakeLoop = true;
-            System.out.println("Please enter first number: ");
-            if (calculator.hasNextDouble()) {
-                var1 = calculator.nextDouble();
-                System.out.println("first number: " + var1);
-                inMistakeLoop = false;
-            } else {
-                System.out.println(wrongNumber);
-            }
-        } while (inMistakeLoop);
+        //How do I simplify the following to avoid repeating myself? A method that just takes numbers?
+        if(choice >= 1 && choice <=4) {
+            do {
+                inMistakeLoop = true;
+                System.out.println("Please enter first number: ");
+                if (calculator.hasNextDouble()) {
+                    var1 = calculator.nextDouble();
+                    System.out.println("first number: " + var1);
+                    inMistakeLoop = false;
+                } else {
+                    System.out.println(wrongNumber);
+                }
+            } while (inMistakeLoop);
 
-        do {
-            inMistakeLoop = true;
-            System.out.println("Please enter second number: ");
-            if (calculator.hasNextDouble()) {
-                var2 = calculator.nextDouble();
-                System.out.println("second number: " + var2);
-                inMistakeLoop = false;
-            } else {
-                System.out.println(wrongNumber);
-            }
-        } while (inMistakeLoop);
+            do {
+                inMistakeLoop = true;
+                System.out.println("Please enter second number: ");
+                if (calculator.hasNextDouble()) {
+                    var2 = calculator.nextDouble();
+                    System.out.println("second number: " + var2);
+                    inMistakeLoop = false;
+                } else {
+                    System.out.println(wrongNumber);
+                }
+            } while (inMistakeLoop);
+        }
 
+        if (choice == 5) {
+            do {
+                inMistakeLoop = true;
+                System.out.println("Please enter radicand: ");
+                if (calculator.hasNextDouble()) {
+                    var1 = calculator.nextDouble();
+                    System.out.println("radicand: " + var1);
+                    inMistakeLoop = false;
+                } else {
+                    System.out.println(wrongNumber);
+                }
+            } while (inMistakeLoop);
+        }
         switch (choice) {
 
             case 1:    //ADDITION:
@@ -81,8 +97,11 @@ public class CalculatorApp {
             } else {
                 System.out.println("The quotient of "+ var1 + " and " + var2 + " is undefined.");
             }
+                break;
+            case 5:     //SQUARE ROOT
+                System.out.println("The square root of " + var1 + "is " + Math.sqrt(var1) + ".");
 
-//        Still need: to return to main menu, square root, and MAYBE changing the numbers.
+//        Still need: to return to main menu, MAYBE changing the numbers.
 
         }
     }
