@@ -14,7 +14,7 @@ public class CalculatorApp {
         String wrongNumber = "Sorry, you need to enter a double.";
         Scanner calculator = new Scanner(System.in);
         int choice = 1;
-        double var1, var2;
+        double var1 = 0, var2 = 0;
         String wordChoice1, wordChoice2;
 
         do {
@@ -45,13 +45,27 @@ public class CalculatorApp {
             System.out.println("Please enter first addend: ");
             if (calculator.hasNextDouble()) {
                 var1 = calculator.nextDouble();
-                System.out.println("first addend:" + var1);
+                System.out.println("first addend: " + var1);
                 inMistakeLoop = false;
             } else {
                 System.out.println(wrongNumber);
             }
         } while (inMistakeLoop);
 
+        do {
+            inMistakeLoop = true;
+            System.out.println("Please enter second addend: ");
+            if (calculator.hasNextDouble()) {
+                var2 = calculator.nextDouble();
+                System.out.println("second addend: " + var2);
+                inMistakeLoop = false;
+            } else {
+                System.out.println(wrongNumber);
+            }
+        } while (inMistakeLoop);
+
+        //ADDITION:
+        System.out.println("The sum of "+var1+" and "+var2+" is "+(var1+var2)+".");
 
 //        System.out.println(choice);
     }
