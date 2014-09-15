@@ -42,10 +42,10 @@ public class CalculatorApp {
 
         do {
             inMistakeLoop = true;
-            System.out.println("Please enter first addend: ");
+            System.out.println("Please enter first number: ");
             if (calculator.hasNextDouble()) {
                 var1 = calculator.nextDouble();
-                System.out.println("first addend: " + var1);
+                System.out.println("first number: " + var1);
                 inMistakeLoop = false;
             } else {
                 System.out.println(wrongNumber);
@@ -54,20 +54,30 @@ public class CalculatorApp {
 
         do {
             inMistakeLoop = true;
-            System.out.println("Please enter second addend: ");
+            System.out.println("Please enter second number: ");
             if (calculator.hasNextDouble()) {
                 var2 = calculator.nextDouble();
-                System.out.println("second addend: " + var2);
+                System.out.println("second number: " + var2);
                 inMistakeLoop = false;
             } else {
                 System.out.println(wrongNumber);
             }
         } while (inMistakeLoop);
 
-        //ADDITION:
-        System.out.println("The sum of "+var1+" and "+var2+" is "+(var1+var2)+".");
+        switch (choice) {
 
-//        System.out.println(choice);
+            case 1:    //ADDITION:
+            System.out.println("The sum of " + var1 + " and " + var2 + " is " + (var1 + var2) + ".");
+                break;
+            case 2:     //SUBTRACTION:
+            System.out.println("The difference of " + var1 + " and " + var2 + " is " + (var1 - var2) + ".");
+                break;
+            case 3:     //MULTIPLICATION
+            System.out.println("The product of " + var1 + " and " + var2 + " is " + (var1 * var2) + ".");
+                break;
+//        Still need: to return to main menu, division, square root, and MAYBE changing the numbers.
+
+        }
     }
 }
 //        CalculatorApp.asmdInput();
