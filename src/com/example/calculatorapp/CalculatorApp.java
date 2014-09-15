@@ -5,11 +5,13 @@ import java.util.Scanner;
  * Created by kyleofori on 9/13/14.
  */
 public class CalculatorApp {
-
-    public static int checkMainScreenInput() {
+    public static void checkMainScreenInput() {
+        //This section is for the main screen--defining variables, and making sure that
+        //the choices are appropriate for the initial rounds of calculation.
         boolean inMistakeLoop = true;
         String mainScreenQuestions = "1 - addition\n2 - subtraction\n3 - addition\n4 - division\n5 - square root";
-        String wrongMainScreen = ("Sorry, you need to enter a number between 1 and 5.");
+        String wrongMainScreen = "Sorry, you need to enter a number between 1 and 5.";
+        String wrongNumber = "Sorry, you need to enter a double.";
         Scanner calculator = new Scanner(System.in);
         int choice = 1;
         double var1, var2;
@@ -31,21 +33,29 @@ public class CalculatorApp {
             }
         } while (inMistakeLoop);
         System.out.println(choice);
-        return choice;
-    }
 
+        //This section is for addition.
+        //It should really use the choice from the previous do-while loop as an input.
+        //I want it to be in a switch, if that's possible...
+        //...but there are so many steps needed after a switch, it would be hard to read unless
+        //I made a separate method for each operation.
 
-    public static void main(String[] args) {
-        double var1;
-        double var2;
-//        int choice = 1;
-        System.out.println("Welcome to your calculator! ");
-        System.out.println("Which operation would you like to perform? Please enter the appropriate number:");
+        do {
+            inMistakeLoop = true;
+            System.out.println("Please enter first addend: ");
+            if (calculator.hasNextDouble()) {
+                var1 = calculator.nextDouble();
+                System.out.println("first addend:" + var1);
+                inMistakeLoop = false;
+            } else {
+                System.out.println(wrongNumber);
+            }
+        } while (inMistakeLoop);
 
-        CalculatorApp.checkMainScreenInput();
 
 //        System.out.println(choice);
-        }
+    }
+}
 //        CalculatorApp.asmdInput();
 
 //        switch(choice) {
@@ -159,5 +169,3 @@ public class CalculatorApp {
 //        //ready to print error message, go into error loop if a string Y or N is not entered. Or...char?
 //        //ready to break the whole calculations loop if N is entered.
 
-
-}
