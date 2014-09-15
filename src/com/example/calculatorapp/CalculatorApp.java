@@ -32,7 +32,7 @@ public class CalculatorApp {
                 calculator.nextLine();
             }
         } while (inMistakeLoop);
-        System.out.println(choice);
+        System.out.println("Your choice is "+choice);
 
         //The following section is for each of the operations.
         //It should really use the choice from the previous do-while loop as an input.
@@ -100,10 +100,11 @@ public class CalculatorApp {
                 break;
             case 5:     //SQUARE ROOT
                 System.out.println("The square root of " + var1 + "is " + Math.sqrt(var1) + ".");
-
-//        Still need: to return to main menu, MAYBE changing the numbers.
-
         }
+
+        //        Still need: to return to main menu, would like to use technical terms instead of "first number".
+
+
     }
 }
 //        CalculatorApp.asmdInput();
