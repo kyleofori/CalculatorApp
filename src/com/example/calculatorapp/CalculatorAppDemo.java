@@ -24,16 +24,18 @@ public class CalculatorAppDemo {
                 if (repeatCalc.hasNextLine()) {
                     anotherCalc = repeatCalc.nextLine();
                     System.out.println(anotherCalc);
-                    System.out.println(!(anotherCalc.equals('Y')));
+                    System.out.println(!(anotherCalc.equals("Y")));
                     //This isn't accepting my answer for some reason.
                     //As long as it's not N or Y....
-                    if (!anotherCalc.equals('N') && !anotherCalc.equals('Y')) {
+                    if (!anotherCalc.equals("N") && !anotherCalc.equals("Y")) {
                         System.out.println("Please press Y for yes or N for no.");
                     }
                 }
-            } while (!anotherCalc.equals('N') && !anotherCalc.equals('Y'));
+            } while (!anotherCalc.equals("N") && !anotherCalc.equals("Y"));
 
-        } while(anotherCalc.equals('Y'));
+        } while(anotherCalc.equals("Y"));
+
+        System.out.println("OK, we're done here. Thank you!");
 
     }
 }
