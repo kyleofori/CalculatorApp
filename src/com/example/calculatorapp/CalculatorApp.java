@@ -75,7 +75,14 @@ public class CalculatorApp {
             case 3:     //MULTIPLICATION
             System.out.println("The product of " + var1 + " and " + var2 + " is " + (var1 * var2) + ".");
                 break;
-//        Still need: to return to main menu, division, square root, and MAYBE changing the numbers.
+            case 4:     //DIVISION
+            if(var2!=0) {
+                System.out.println("The quotient of "+ var1 + " and " + var2 + " is " + (var1/var2) + ".");
+            } else {
+                System.out.println("The quotient of "+ var1 + " and " + var2 + " is undefined.");
+            }
+
+//        Still need: to return to main menu, square root, and MAYBE changing the numbers.
 
         }
     }
